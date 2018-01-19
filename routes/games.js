@@ -32,11 +32,9 @@ module.exports = io => {
         userId: req.account._id,
         players: [{
           userId: req.account._id,
-          pairs: []
         }],
-        cards: utils.shuffle('✿✪♦✵♣♠♥✖'.repeat(2).split(''))
-          .map((symbol) => ({ visible: false, symbol }))
-      }
+        squares: Array(9).fill(null)
+        }
 
       Game.create(newGame)
         .then((game) => {
@@ -73,6 +71,7 @@ module.exports = io => {
           const updatedGame = { ...game, ...patchForGame }
 
           Game.findByIdAndUpdate(id, { $set: updatedGame }, { new: true })
+
             .then((game) => {
               io.emit('action', {
                 type: 'GAME_UPDATED',
