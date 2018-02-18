@@ -1,10 +1,10 @@
-// models/game.js
 const mongoose = require('../config/database')
 const { Schema } = mongoose
 
 const playerSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: 'users' },
-});
+  name: { type: String }
+})
 
 const gameSchema = new Schema({
   players: [playerSchema],
