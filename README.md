@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-This project was built during the second week of the advanced bootcamp.
+This project was built during the second week of the advanced bootcamp, by [fandytcc](https://github.com/fandytcc) & [brunadafonseca](https://github.com/brunadafonseca).
 
 ![screenshot](https://res.cloudinary.com/dyyxiefx5/image/upload/v1518991206/Screen_Shot_2018-02-18_at_10.58.01_PM_iwnhed.png)
 
