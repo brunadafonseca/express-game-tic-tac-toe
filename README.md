@@ -1,45 +1,30 @@
-# Express Games API
+# Tic Tac Toe
 
-RESTful Express API for Games on top of MongoDB.
+This project was built during the second week of the advanced bootcamp, by [fandytcc](https://github.com/fandytcc) & [brunadafonseca](https://github.com/brunadafonseca).
 
-## Authentication
+![screenshot](https://res.cloudinary.com/dyyxiefx5/image/upload/v1518991206/Screen_Shot_2018-02-18_at_10.58.01_PM_iwnhed.png)
 
-Create a User with the following attributes:
 
-| Attribute | Type   | Description   |
-|-----------|--------|---------------|
-| name      | string | Full name     |
-| email     | string | Email address |
-| password  | string | Password      |
+### Project requirements:
 
-Use the following endpoints to deal with initial authentication and the user.
++ Build a tic-tac-toe game using React, Redux, socket.io, Express and MongoDB
++ No game logic in the front-end
 
-| HTTP Verb | Path        | Description |
-|-----------|-------------|--------------|
-| `POST`    | `/users`    | Create a user account |
-| `POST`    | `/sessions` | Log in with email and password, and retrieve a JWT token |
-| `GET`     | `/users/me` | Retrieve own user data |
 
-To authorize further requests, use Bearer authentication with the provided JWT token:
+Make sure you have mongoDB installed
 
-```
-Authorization: Bearer <token here>
+```bash
+git clone git@github.com:brunadafonseca/react-game-tic-tac-toe.git
+cd react-game-tic-tac-toe
+yarn install
+node .
 ```
 
-_**Note**: See `db/seed.js` for an example._
+For the front-end:
 
-## Games
-
-**Note:** See `models/game.js` for the Game schema attributes.
-
-| HTTP Verb | Path | Description |
-|-----------|------|--------------|
-| `GET` | `/games` | Retrieve all games |
-| `POST` | `/games` | Create a game* |
-| `GET` | `/games/:id` | Retrieve a single game by it's `id` |
-| `PUT` | `/games/:id` | Update a game with a specific `id`* |
-| `PATCH` | `/games/:id` | Patch (partial update) a game with a specific `id`* |
-| `DELETE` | `/games/:id` | Destroy a single game by it's `id`* |
-| | | _* Needs authentication_ |
-
-_**Note**: Run `yarn run seed` to seed some initial games._
+```bash
+git clone git@github.com:brunadafonseca/express-game-tic-tac-toe.git
+cd express-game-tic-tac-toe
+yarn install
+yarn start
+```
