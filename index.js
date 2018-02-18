@@ -13,7 +13,6 @@ const app = express()
 const server = http.Server(app)
 const io = socketIO(server)
 
-// using auth middleware
 io.use(socketAuth);
 
 io.on('connect', socket => {

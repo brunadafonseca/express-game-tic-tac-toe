@@ -1,4 +1,3 @@
-// routes/games.js
 const router = require('express').Router()
 const passport = require('../../config/auth')
 const { Game, User } = require('../../models')
@@ -26,7 +25,6 @@ const getPlayers = (req, res, next) => {
 
         return {
           userId: player.userId,
-          pairs: player.pairs,
           name
         }
       })
@@ -53,8 +51,7 @@ module.exports = io => {
         return next(error)
       }
 
-      // Add the user to the players
-      req.game.players.push({ userId, pairs: [] })
+      req.game.players.push({ userId })
 
       req.game.save()
         .then((game) => {
